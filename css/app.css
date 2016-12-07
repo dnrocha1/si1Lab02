@@ -4,5 +4,10 @@
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: yellow;
+	/*background-color: yellow;*/
+}
+
+.done{
+	text-decoration: line-through;
+	color: gray;
 }
