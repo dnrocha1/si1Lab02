@@ -1,5 +1,6 @@
-var app = angular.module("myApp", []);
-app.controller("myController", function($scope) {
-	$scope.firstName = "Jobson";
-	$scope.lastName = "Lucas";
+var app = angular.module("todoApp", []);
+app.controller("appController", function($scope) {
+	$scope.tarefa = [
+		{}
+	];
 });
