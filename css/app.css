@@ -11,3 +11,11 @@
 	text-decoration: line-through;
 	color: gray;
 }
+
+ul {
+  list-style-type: none;
+}
+
+th {
+	text-align: center;
+}
