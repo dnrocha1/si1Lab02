@@ -17,16 +17,25 @@
 		Caixa de Entrada
 	</nav>
 	<div id="content" ng-controller="appController">
+		<nav class="navbar navbar-default">
+			Caixa de Entrada
+		</nav>
 		<table class="table table-hover table-stripped table-bordered">
 			<!-- <thead class="thead-inverse">
 				<tr>
 					<th>TODO List</th>
 				</tr>
 			</thead> -->
-			<tr>
-				<input type="text" name="addTask" size="50" placeholder="Adicionar uma tarefa pendente...">
-			</tr>
-			<tr ng-repeat="task in tasks">
+			<thead>
+				<th>
+					<form ng-submit="addTask()">
+						<input type="text" ng-model="tasksInput" size="50" placeholder="Adicionar uma tarefa pendente...">
+	   					<input type="submit" value="Add New">
+					</form>
+				</th>
+			</thead>
+			
+			<tr ng-repeat="task in tasksList">
 				<td>
 					<input type="checkbox" ng-model="task.done">
 					<span ng-class="{'done':task.done}">{{task.title}}</span>
