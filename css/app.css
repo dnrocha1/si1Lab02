@@ -6,13 +6,16 @@ h2 {
 	color: #eee;
 }
 
+ul {
+	list-style-type: none;
+}
+
 #content {
 	width: 600px;
 	text-align: center;
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
-	/*background-color: yellow;*/
 }
 
 .isDone-true {
@@ -27,26 +30,6 @@ h2 {
 .list-group li:hover {
 	background-color: #eee;
 }
-
-/*.list-group .glyphicon {
-	float: right;
-	padding-top:12px;
-	cursor: pointer;
-}
-
-.list-group #myid:hover .glyphicon{
-	color: red;
-}*/
-
-/*.list-group .glyphicon:hover{
-	color: red;
-}*/
-
-/*.list-group .btn .glyphicon{
-	padding: 0;
-	border: none;
-	background: none;
-}*/
 
 #removerTasks {
 	background-color: transparent;
@@ -65,16 +48,12 @@ h2 {
 
 .list-group .btn-default:hover .glyphicon{
 	color: red;
- }
+}
 
- .nav{
-    max-height: 300px;
-    overflow-y:auto; 
+.nav{
+	max-height: 300px;
+	overflow-y:auto; 
 }
 .sidebar-nav {
 	border-radius: 50%;
-}
-
-ul {
-  list-style-type: none;
 }

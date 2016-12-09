@@ -12,7 +12,7 @@ app.controller("appController", function($scope) {
 		$scope.tasksInput = "";
 	}
 
-	$scope.removeDone = function(){
+	$scope.removeTaskDone = function(){
 		var oldTasks = $scope.tasksList;
 		$scope.tasksList = [];
 		angular.forEach(oldTasks, function(task){
