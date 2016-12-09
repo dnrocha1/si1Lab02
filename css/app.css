@@ -1,4 +1,4 @@
-#content{
+#content {
 	width: 600px;
 	text-align: center;
 	margin-top: 20px;
@@ -7,9 +7,17 @@
 	/*background-color: yellow;*/
 }
 
-.done{
+.isDone-true {
 	text-decoration: line-through;
 	color: gray;
+}
+
+.list-group {
+	text-align: left;
+}
+
+.list-group li:hover {
+	background-color: #eee;
 }
 
 ul {

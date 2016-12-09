@@ -25,49 +25,38 @@
 	  </div>
 	</nav>
 	<div id="content" ng-controller="appController">
-		<nav class="navbar navbar-default">
-			<h3>
-				Caixa de Entrada
-			</h3>
-		</nav>
-		<table class="table table-hover table-bordered">
-			<thead>
-				<th>
-					<form ng-submit="addTask()" >
-					<div class="row">
-						<div class="col-md-10">
-							<input type="text" ng-model="tasksInput" class="form-control" placeholder="Adicionar uma tarefa pendente...">
-						</div>
-						<div class="col-md-2">
-							<input class="btn bnt-primary" type="submit" value="Adicionar">
-						</div>
+		<h2>
+			Caixa de Entrada
+		</h2>
+		<div class="well">
+			<form ng-submit="addTask()" >
+				<div class="row">
+					<div class="col-md-9">
+						<input type="text" ng-model="tasksInput" class="form-control" placeholder="Adicionar uma tarefa pendente...">
 					</div>
-						
-	   					
-					</form>
-				</th>
-			</thead>	
-			<tr>
-				<div class="progress">
+					<div class="col-md-3">
+						<input class="btn btn-primary bnt-block" type="submit" value="Adicionar" ng-disabled="!tasksInput">
+					</div>
+				</div>
+			</form>
+		</div>
+		<div>
+			<div class="progress">
 					<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" ng-style="{ 'width': getProgressPercentage()+'%' } ">
 						{{getProgressPercentage()|number:2}}%
 					</div>
 				</div>
-			</tr>
-			<tr>
-				<span>{{(tasksList|filter:isDone == true).length}} of {{tasksList.length}} remaining</span>
-				<br>
-				<span>{{getProgressPercentage()|number:2}}</span>
-			</tr>		
-			<tr ng-repeat="task in tasksList">
-				<td>
-					<input type="checkbox" ng-model="task.isDone">
-					<span class="isDone-{{task.isDone}}">{{task.title}}</span>
-					<!-- <p>{{getNumDone()}}</p> -->
-					<!-- <p>{{task.isDone}}</p> -->
-				</td>
-			</tr>
-		</table>
+		</div>
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="task in tasksList">
+				<div class="checkbox">
+  				<label>
+  					<input type="checkbox" ng-model="task.isDone">
+  					<span class="isDone-{{task.isDone}}">{{task.title}}</span>
+  				</label>
+			</div>
+			</li>
+		</ul>
 	</div>
 </body>
 </html>
