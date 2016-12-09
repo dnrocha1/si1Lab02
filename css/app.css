@@ -1,3 +1,11 @@
+body {
+	background-image: url("http://downloads.dvq.co.nz/assets/img/downloads/hand-crafted-wood-vertical/2560x1440.png");
+}
+
+h2 {
+	color: #eee;
+}
+
 #content {
 	width: 600px;
 	text-align: center;
@@ -20,10 +28,53 @@
 	background-color: #eee;
 }
 
-ul {
-  list-style-type: none;
+/*.list-group .glyphicon {
+	float: right;
+	padding-top:12px;
+	cursor: pointer;
 }
 
-th {
-	text-align: center;
+.list-group #myid:hover .glyphicon{
+	color: red;
+}*/
+
+/*.list-group .glyphicon:hover{
+	color: red;
+}*/
+
+/*.list-group .btn .glyphicon{
+	padding: 0;
+	border: none;
+	background: none;
+}*/
+
+#removerTasks {
+	background-color: transparent;
+	border: none;
+}
+
+.btn-default {
+	border: none;
+	float: right;
+	padding-top:12px;
+	background-color: transparent;
+}
+.btn-default:hover {
+	background-color: transparent;
+}
+
+.list-group .btn-default:hover .glyphicon{
+	color: red;
+ }
+
+ .nav{
+    max-height: 300px;
+    overflow-y:auto; 
+}
+.sidebar-nav {
+	border-radius: 50%;
+}
+
+ul {
+  list-style-type: none;
 }

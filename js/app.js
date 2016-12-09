@@ -12,11 +12,17 @@ app.controller("appController", function($scope) {
 		$scope.tasksInput = "";
 	}
 
-	$scope.clearDone = function(){
-
+	$scope.removeDone = function(){
+		var oldTasks = $scope.tasksList;
+		$scope.tasksList = [];
+		angular.forEach(oldTasks, function(task){
+			if (!task.isDone) {
+				$scope.tasksList.push(task);
+			}
+		});
 	}
 
-	$scope.getNumDone = function(){
+	$scope.getNumDoneTasks = function(){
 		var count = 0;
 		angular.forEach($scope.tasksList, function(task){
 			if (task.isDone) {
@@ -27,6 +33,6 @@ app.controller("appController", function($scope) {
 	}
 
 	$scope.getProgressPercentage = function(){
-		return ($scope.getNumDone()/$scope.tasksList.length)*100;
+		return ($scope.getNumDoneTasks()/$scope.tasksList.length)*100;
 	}
 });
